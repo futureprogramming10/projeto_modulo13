@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Jan-2020 às 17:10
+-- Tempo de geração: 16-Jan-2020 às 20:38
 -- Versão do servidor: 10.4.10-MariaDB
 -- versão do PHP: 7.3.12
 
@@ -46,21 +46,20 @@ INSERT INTO `categorias` (`id_categorias`, `nome_categoria`, `created`, `modifie
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `prod`
+-- Estrutura da tabela `categorias_users`
 --
 
-CREATE TABLE `prod` (
+CREATE TABLE `categorias_users` (
   `id_prod` int(11) NOT NULL,
-  `id_categorias` int(11) DEFAULT NULL,
-  `id_users` int(11) DEFAULT NULL
+  `categorias_id` int(11) DEFAULT NULL,
+  `users_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `prod`
+-- Extraindo dados da tabela `categorias_users`
 --
 
-INSERT INTO `prod` (`id_prod`, `id_categorias`, `id_users`) VALUES
-(4, 2, 1),
+INSERT INTO `categorias_users` (`id_prod`, `categorias_id`, `users_id`) VALUES
 (5, 1, 2);
 
 -- --------------------------------------------------------
@@ -116,12 +115,12 @@ ALTER TABLE `categorias`
   ADD PRIMARY KEY (`id_categorias`);
 
 --
--- Índices para tabela `prod`
+-- Índices para tabela `categorias_users`
 --
-ALTER TABLE `prod`
+ALTER TABLE `categorias_users`
   ADD PRIMARY KEY (`id_prod`),
-  ADD KEY `id_categorias` (`id_categorias`),
-  ADD KEY `id_users` (`id_users`);
+  ADD KEY `id_categorias` (`categorias_id`),
+  ADD KEY `id_users` (`users_id`);
 
 --
 -- Índices para tabela `produtos`
@@ -147,9 +146,9 @@ ALTER TABLE `categorias`
   MODIFY `id_categorias` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de tabela `prod`
+-- AUTO_INCREMENT de tabela `categorias_users`
 --
-ALTER TABLE `prod`
+ALTER TABLE `categorias_users`
   MODIFY `id_prod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
@@ -169,11 +168,11 @@ ALTER TABLE `users`
 --
 
 --
--- Limitadores para a tabela `prod`
+-- Limitadores para a tabela `categorias_users`
 --
-ALTER TABLE `prod`
-  ADD CONSTRAINT `user_categoria_ibfk_1` FOREIGN KEY (`id_categorias`) REFERENCES `categorias` (`id_categorias`),
-  ADD CONSTRAINT `user_categoria_ibfk_2` FOREIGN KEY (`id_users`) REFERENCES `users` (`id_users`);
+ALTER TABLE `categorias_users`
+  ADD CONSTRAINT `user_categoria_ibfk_1` FOREIGN KEY (`categorias_id`) REFERENCES `categorias` (`id_categorias`),
+  ADD CONSTRAINT `user_categoria_ibfk_2` FOREIGN KEY (`users_id`) REFERENCES `users` (`id_users`);
 
 --
 -- Limitadores para a tabela `produtos`
