@@ -5,14 +5,14 @@
  */
 ?>
 <div class="users index content">
-    <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Criar Novo User'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Users') ?></h3>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('id_users') ?></th>
-                    <th><?= $this->Paginator->sort('nome') ?></th>
+                    <th><?= $this->Paginator->sort('ID User') ?></th>
+                    <th><?= $this->Paginator->sort('Nome') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -23,7 +23,7 @@
                     <td><?= h($user->nome) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $user->id_users]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id_users]) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $user->id_users]) ?>
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id_users], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id_users)]) ?>
                     </td>
                 </tr>

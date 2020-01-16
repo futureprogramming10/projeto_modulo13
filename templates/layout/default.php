@@ -43,7 +43,7 @@ $cakeDescription = 'TinocoPHP';
             <a href="/"><span>Tinoco</span>PHP</a>
         </div>
         <div class="top-nav-links">
-            <a target="_blank" href="https://book.cakephp.org/4/">Documentation</a>
+            <a target="_blank" href="https://github.com/futureprogramming10/projeto_modulo13">GITHUB</a>
         </div>
     </nav>
     <main class="main">

@@ -5,15 +5,15 @@
  */
 ?>
 <div class="prod index content">
-    <?= $this->Html->link(__('New Prod'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Adicionar Nova Categoria'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Prod') ?></h3>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('Prod') ?></th>
-                    <th><?= $this->Paginator->sort('Categorias') ?></th>
-                    <th><?= $this->Paginator->sort('Users') ?></th>
+                    <th><?= $this->Paginator->sort('ID Prod') ?></th>
+                    <th><?= $this->Paginator->sort('Categoria') ?></th>
+                    <th><?= $this->Paginator->sort('User') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
