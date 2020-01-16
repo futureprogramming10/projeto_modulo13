@@ -35,6 +35,10 @@ class ProdTable extends Table
         $this->setTable('prod');
         $this->setDisplayField('id_prod');
         $this->setPrimaryKey('id_prod');
+
+        $this->belongsTo('Users', [
+            'foreignKey' => 'id_users',
+        ]);
     }
 
     /**

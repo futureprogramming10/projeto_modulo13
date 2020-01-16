@@ -18,6 +18,7 @@
                 <legend><?= __('Add User') ?></legend>
                 <?php
                     echo $this->Form->control('nome');
+                    echo $this->Form->control('categorias._ids', ['options' => $categorias]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

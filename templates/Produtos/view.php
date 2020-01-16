@@ -16,7 +16,7 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="produtos view content">
-            <h3>Aulas</h3>
+            <h3><?= h($produto->nome_produto) ?></h3>
             <table>
                 <tr>
                     <th><?= __('Nome Produto') ?></th>
@@ -25,6 +25,18 @@
                 <tr>
                     <th><?= __('Categoria') ?></th>
                     <td><?= $produto->has('categoria') ? $this->Html->link($produto->categoria->nome_categoria, ['controller' => 'Categorias', 'action' => 'view', $produto->categoria->id_categorias]) : '' ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Id Produtos') ?></th>
+                    <td><?= $this->Number->format($produto->id_produtos) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Created') ?></th>
+                    <td><?= h($produto->created) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Modified') ?></th>
+                    <td><?= h($produto->modified) ?></td>
                 </tr>
             </table>
         </div>

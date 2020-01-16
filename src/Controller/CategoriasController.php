@@ -34,7 +34,7 @@ class CategoriasController extends AppController
     public function view($id = null)
     {
         $categoria = $this->Categorias->get($id, [
-            'contain' => [],
+            'contain' => ['Users'],
         ]);
 
         $this->set('categoria', $categoria);
@@ -57,7 +57,8 @@ class CategoriasController extends AppController
             }
             $this->Flash->error(__('The categoria could not be saved. Please, try again.'));
         }
-        $this->set(compact('categoria'));
+        $users = $this->Categorias->Users->find('list', ['limit' => 200]);
+        $this->set(compact('categoria', 'users'));
     }
 
     /**
@@ -70,7 +71,7 @@ class CategoriasController extends AppController
     public function edit($id = null)
     {
         $categoria = $this->Categorias->get($id, [
-            'contain' => [],
+            'contain' => ['Users'],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $categoria = $this->Categorias->patchEntity($categoria, $this->request->getData());
@@ -81,7 +82,8 @@ class CategoriasController extends AppController
             }
             $this->Flash->error(__('The categoria could not be saved. Please, try again.'));
         }
-        $this->set(compact('categoria'));
+        $users = $this->Categorias->Users->find('list', ['limit' => 200]);
+        $this->set(compact('categoria', 'users'));
     }
 
     /**

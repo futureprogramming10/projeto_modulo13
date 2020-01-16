@@ -11,6 +11,8 @@ use Cake\Validation\Validator;
 /**
  * Categorias Model
  *
+ * @property \App\Model\Table\UsersTable&\Cake\ORM\Association\BelongsToMany $Users
+ *
  * @method \App\Model\Entity\Categoria get($primaryKey, $options = [])
  * @method \App\Model\Entity\Categoria newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\Categoria[] newEntities(array $data, array $options = [])
@@ -39,6 +41,12 @@ class CategoriasTable extends Table
         $this->setPrimaryKey('id_categorias');
 
         $this->addBehavior('Timestamp');
+
+        $this->belongsToMany('Users', [
+            'foreignKey' => 'categoria_id',
+            'targetForeignKey' => 'user_id',
+            'joinTable' => 'categorias_users',
+        ]);
     }
 
     /**

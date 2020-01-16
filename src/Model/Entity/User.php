@@ -10,6 +10,8 @@ use Cake\ORM\Entity;
  *
  * @property int $id_users
  * @property string $nome
+ *
+ * @property \App\Model\Entity\Categoria[] $categorias
  */
 class User extends Entity
 {
@@ -24,5 +26,6 @@ class User extends Entity
      */
     protected $_accessible = [
         'nome' => true,
+        'categorias' => true,
     ];
 }

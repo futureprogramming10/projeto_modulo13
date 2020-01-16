@@ -18,6 +18,7 @@
                 <legend><?= __('Add Categoria') ?></legend>
                 <?php
                     echo $this->Form->control('nome_categoria');
+                    echo $this->Form->control('users._ids', ['options' => $users]);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

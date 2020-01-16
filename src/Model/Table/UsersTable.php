@@ -11,6 +11,8 @@ use Cake\Validation\Validator;
 /**
  * Users Model
  *
+ * @property \App\Model\Table\CategoriasTable&\Cake\ORM\Association\BelongsToMany $Categorias
+ *
  * @method \App\Model\Entity\User get($primaryKey, $options = [])
  * @method \App\Model\Entity\User newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\User[] newEntities(array $data, array $options = [])
@@ -35,6 +37,12 @@ class UsersTable extends Table
         $this->setTable('users');
         $this->setDisplayField('nome');
         $this->setPrimaryKey('id_users');
+
+        $this->belongsToMany('Categorias', [
+            'foreignKey' => 'user_id',
+            'targetForeignKey' => 'categoria_id',
+            'joinTable' => 'categorias_users',
+        ]);
     }
 
     /**
