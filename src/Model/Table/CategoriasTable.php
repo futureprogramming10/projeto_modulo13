@@ -42,11 +42,6 @@ class CategoriasTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsToMany('Users', [
-            'foreignKey' => 'categoria_id',
-            'targetForeignKey' => 'user_id',
-            'joinTable' => 'categorias_users',
-        ]);
     }
 
     /**

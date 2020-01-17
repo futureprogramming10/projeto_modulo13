@@ -16,7 +16,7 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="produtos view content">
-            <h3><?= h($produto->nome_produto) ?></h3>
+            <h3><?= h($produto->id_produtos) ?></h3>
             <table>
                 <tr>
                     <th><?= __('Nome Produto') ?></th>

@@ -4,9 +4,8 @@
  * @var \App\Model\Entity\Categoria[]|\Cake\Collection\CollectionInterface $categorias
  */
 ?>
- 
 <div class="categorias index content">
-    <?= $this->Html->link(__('Nova Categoria'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('New Categoria'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Categorias') ?></h3>
     <div class="table-responsive">
         <table>
@@ -14,8 +13,8 @@
                 <tr>
                     <th><?= $this->Paginator->sort('ID Categorias') ?></th>
                     <th><?= $this->Paginator->sort('Categoria') ?></th>
-                    <th><?= $this->Paginator->sort('Criada') ?></th>
-                    <th><?= $this->Paginator->sort('Modificada') ?></th>
+                    <th><?= $this->Paginator->sort('created') ?></th>
+                    <th><?= $this->Paginator->sort('modified') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -47,7 +46,3 @@
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>
-        
-<a href="Produtos">Produtos</a>
-<a href="Users">Users</a>
-<a href="CategoriasUsers">Ver</a>

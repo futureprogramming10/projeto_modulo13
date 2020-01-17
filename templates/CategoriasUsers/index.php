@@ -5,15 +5,15 @@
  */
 ?>
 <div class="categoriasUsers index content">
-    <?= $this->Html->link(__('Adicionar'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('New Categorias User'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Categorias Users') ?></h3>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('ID Prod') ?></th>
-                    <th><?= $this->Paginator->sort('Categoria') ?></th>
-                    <th><?= $this->Paginator->sort('User') ?></th>
+                    <th><?= $this->Paginator->sort('id_prod') ?></th>
+                    <th><?= $this->Paginator->sort('categorias_id') ?></th>
+                    <th><?= $this->Paginator->sort('users_id') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -44,8 +44,3 @@
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>
-
-
-<a href="Categorias">Categorias</a>
-<a href="Produtos">Produtos</a>
-<a href="Users">Users</a>

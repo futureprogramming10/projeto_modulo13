@@ -50,7 +50,7 @@ class CategoriasUsersController extends AppController
      */
     public function add()
     {
-        $categoriasUser = $this->Categoriasusers->newEmptyEntity();
+        $categoriasUser = $this->CategoriasUsers->newEmptyEntity();
         if ($this->request->is('post')) {
             $categoriasUser = $this->CategoriasUsers->patchEntity($categoriasUser, $this->request->getData());
             if ($this->CategoriasUsers->save($categoriasUser)) {
@@ -60,8 +60,8 @@ class CategoriasUsersController extends AppController
             }
             $this->Flash->error(__('The categorias user could not be saved. Please, try again.'));
         }
-        $categorias = $this->Categoriasusers->Categorias->find('list', ['limit' => 200]);
-        $users = $this->Categoriasusers->Users->find('list', ['limit' => 200]);
+        $categorias = $this->CategoriasUsers->Categorias->find('list', ['limit' => 200]);
+        $users = $this->CategoriasUsers->Users->find('list', ['limit' => 200]);
         $this->set(compact('categoriasUser', 'categorias', 'users'));
     }
 

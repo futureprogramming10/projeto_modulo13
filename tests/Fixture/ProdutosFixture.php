@@ -47,8 +47,8 @@ class ProdutosFixture extends TestFixture
                 'id_produtos' => 1,
                 'nome_produto' => 'Lorem ipsum dolor sit amet',
                 'categoria_produto_id' => 1,
-                'created' => '2020-01-16 16:54:15',
-                'modified' => '2020-01-16 16:54:15',
+                'created' => '2020-01-17 11:35:37',
+                'modified' => '2020-01-17 11:35:37',
             ],
         ];
         parent::init();

@@ -38,11 +38,6 @@ class UsersTable extends Table
         $this->setDisplayField('nome');
         $this->setPrimaryKey('id_users');
 
-        $this->belongsToMany('Categorias', [
-            'foreignKey' => 'user_id',
-            'targetForeignKey' => 'categoria_id',
-            'joinTable' => 'categorias_users',
-        ]);
     }
 
     /**
