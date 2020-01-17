@@ -4,6 +4,7 @@
  * @var \App\Model\Entity\Categoria[]|\Cake\Collection\CollectionInterface $categorias
  */
 ?>
+ 
 <div class="categorias index content">
     <?= $this->Html->link(__('Nova Categoria'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Categorias') ?></h3>
@@ -46,3 +47,7 @@
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>
+        
+<a href="Produtos">Produtos</a>
+<a href="Users">Users</a>
+<a href="CategoriasUsers">Ver</a>

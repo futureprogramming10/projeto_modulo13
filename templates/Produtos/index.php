@@ -5,7 +5,7 @@
  */
 ?>
 <div class="produtos index content">
-    <?= $this->Html->link(__('Adicionar Produto'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Novo Produto'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Produtos') ?></h3>
     <div class="table-responsive">
         <table>
@@ -48,3 +48,7 @@
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
 </div>
+
+<a href="Categorias">Categorias</a>
+<a href="Users">Users</a>
+<a href="CategoriasUsers">Ver</a>

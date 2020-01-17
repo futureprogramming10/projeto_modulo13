@@ -1,7 +1,7 @@
 /* Miligram overrides */
 a {
-    font-family: "Raleway", sans-serif;
-    color: #404041;
+    font-family: Sans-serif;
+    color: green;
 }
 
 /* Utility */
@@ -14,7 +14,7 @@ a {
 
 /* Main */
 body {
-    background: #f5f7fa;
+    background: black;
 }
 .content {
     padding: 2rem;
@@ -43,7 +43,7 @@ th {
 }
 .top-nav-title a {
     font-size: 2.4rem;
-    color: #d33c43;
+    color: greenyellow;
 }
 .top-nav-title span {
     color: #404041;

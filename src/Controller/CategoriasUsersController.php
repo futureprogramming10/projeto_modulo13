@@ -22,7 +22,7 @@ class CategoriasUsersController extends AppController
         $this->paginate = [
             'contain' => ['Categorias', 'Users'],
         ];
-        $categoriasUsers = $this->paginate($this->Categoriasusers);
+        $categoriasUsers = $this->paginate($this->CategoriasUsers);
 
         $this->set(compact('categoriasUsers'));
     }
@@ -36,7 +36,7 @@ class CategoriasUsersController extends AppController
      */
     public function view($id = null)
     {
-        $categoriasUser = $this->Categoriasusers->get($id, [
+        $categoriasUser = $this->CategoriasUsers->get($id, [
             'contain' => ['Categorias', 'Users'],
         ]);
 
@@ -74,7 +74,7 @@ class CategoriasUsersController extends AppController
      */
     public function edit($id = null)
     {
-        $categoriasUser = $this->Categoriasusers->get($id, [
+        $categoriasUser = $this->CategoriasUsers->get($id, [
             'contain' => [],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
@@ -86,8 +86,8 @@ class CategoriasUsersController extends AppController
             }
             $this->Flash->error(__('The categorias user could not be saved. Please, try again.'));
         }
-        $categorias = $this->Categoriasusers->Categorias->find('list', ['limit' => 200]);
-        $users = $this->Categoriasusers->Users->find('list', ['limit' => 200]);
+        $categorias = $this->CategoriasUsers->Categorias->find('list', ['limit' => 200]);
+        $users = $this->CategoriasUsers->Users->find('list', ['limit' => 200]);
         $this->set(compact('categoriasUser', 'categorias', 'users'));
     }
 
@@ -101,8 +101,8 @@ class CategoriasUsersController extends AppController
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
-        $categoriasUser = $this->Categoriasusers->get($id);
-        if ($this->Categoriasusers->delete($categoriasUser)) {
+        $categoriasUser = $this->CategoriasUsers->get($id);
+        if ($this->CategoriasUsers->delete($categoriasUser)) {
             $this->Flash->success(__('The categorias user has been deleted.'));
         } else {
             $this->Flash->error(__('The categorias user could not be deleted. Please, try again.'));

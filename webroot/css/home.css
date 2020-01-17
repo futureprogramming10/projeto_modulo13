@@ -12,6 +12,7 @@
 }
 body {
     padding: 60px 0;
+    background-color: black;
 }
 header {
     margin-bottom: 60px;
@@ -28,7 +29,7 @@ ul {
     padding-left: 25px;
 }
 a {
-    color: #0071BC;
+    color: green;
     text-decoration: underline;
 }
 hr {
@@ -44,7 +45,7 @@ hr {
     margin-right: 10px;
 }
 .release-name {
-    color: #D33C43;
+    color: green;
     font-weight: 400;
     font-style: italic;
 }
@@ -70,3 +71,4 @@ hr {
     padding: 10px;
     margin: 10px 0;
 }
+

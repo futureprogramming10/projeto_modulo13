@@ -54,5 +54,14 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 </head>
 <body>
 
+    <div class="container">
+    
+        <a href="Categorias/"><button>Categorias</button></a>
+        <a href="Produtos/"><button>Produtos</button></a>
+        <a href="Users/"><button>Users</button></a>
+        <a href="categoriasUsers/"><button>Ver</button></a>
+
+    </div>
+
 </body>
 </html>
